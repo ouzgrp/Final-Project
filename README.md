@@ -2,9 +2,6 @@
 
 # PRESENTATION <br>
 
-For Google slides, click [here](https://docs.google.com/presentation/d/1AZAHoBO62K7w25aLe06KhCUYCM8lwJU0Mf8bp9vBhC0/edit#slide=id.p)<br>
-For Tableau Dashboard, click [here](https://public.tableau.com/app/profile/madelyn.pineault/viz/WorldHappinessReport_16540413532210/WORLDHAPPINESS?publish=yes)
-
 
 # Overview <br>
 ## Selected topic, Reason why, Questions to answers
@@ -56,43 +53,43 @@ Given more, it would have been ideal to make an interactive website using FLASK.
 
  ###### <i> Description of preliminary data processing.</i><br>
 Before we could start building our model, we had to clean our data. Using Jupyter Notebook, we read in each of our files (2015-2019) and removed unnecessary columns, and changed column names so that each year's columns would align. Next, for 2015 specifcally, we assigned a number (1-10) to each region. Lastly, we converted the column 'Happiness Score' from a range of 0-10 to 0 (low) and 1 (high). 
- ![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-05-27%20at%2011.35.17%20AM.png)
+ ![image](https://https://github.com/ouzgrp/Final-Project/blob/ML---Tue/7.png)
 
 ###### <i>Description of prelimnary feature engineering and prelimanry feature selection, including their decision-making process.</i><br>
 After we had cleaned our data and created our SQL database in Postgres, we reuploaded our data using SQLAlchemy. Once that was complete, we started building our machine learning model using out 2015 dataset. 
 For our features, we are using 'Happiness Score' as our Y value as that is the factor we are trying to predict. We would like to see how our other columns, including GDP, life expectancy, and family affect different region's happiness scores. 
 
- ![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-05-25%20at%207.10.03%20PM.png)
+ ![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/1.png)
 
 ###### <i> Description of how data was split into training and testing sets.</i><br>
 We then split our data into training and testing data before we proceeded with our models:
 
-![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-05-27%20at%2011.05.53%20AM.png)
+![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/2.png)
 
 ###### <i> Explanation of model choice, including limitations and benefits</i>
 **Models tested and their results:**
 * Random Forest Classifier
   * Testing Accuracy Score: 83.3%
   * Training Accuracy Score: 98.6%
-![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-05-27%20at%2011.10.00%20AM.png)
+![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/3.png)
 * Easy Ensemble AdaBoost Classifier
   * Testing Accuracy Score: 81.2%
   * Training Accuracy Score: 97.1%
- ![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-06-03%20at%201.35.59%20PM.png)
+ ![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/4.png)
 * Logistic Regression - Random Oversampling
   * Testing Accuracy Score:87.5%
   * Training Accuracy Score: 87.8%
-![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-05-27%20at%2011.11.41%20AM.png)
+![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/5.png)
 * Logistic Regression - Undersampling
   * Testing Accuracy Score: 87.5%
   * Training Accuracy Score: 86.5%
-![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-05-27%20at%2011.12.31%20AM.png)
+![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/6.png)
 * Logistic Regression - Combination (Over and Under) Sampling
   * Testing Accuracy Score: 90.6% 
   * Training Accuracy Score: 84.6%
   
-![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-06-06%20at%208.52.35%20PM.png)
-![image](https://github.com/jbranaman/Capstone_Project/blob/main/Resources/Screen%20Shot%202022-06-08%20at%206.09.19%20PM.png)
+![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/12.png)
+![image](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/9.png)
 **Model choice:**
   * We are proceeding with a logistic regression model, using the Combination (under & over) sampling for the following reasons:
     * We are using a logistic regression model because we are classifying regions as either 'Low' or 'High' 
@@ -131,33 +128,29 @@ See 'world_happiness_join_tables.sql' file. <br>
 
  <i> Our data will be displayed using Tableau Public, a free software that allows for a wide variety of Data Visualization options. </i>
  
- 
- This [link]([https://public.tableau.com/app/profile/madelyn.pineault/viz/WorldHappinessReport_16540413532210/WORLDHAPPINESS?publish=yes](https://public.tableau.com/app/profile/madelyn.pineault/viz/WorldHappinessReport_16540413532210/WORLDHAPPINESS?publish=yes)) shows our visualization dashboard. 
- 
- https://public.tableau.com/app/profile/madelyn.pineault/viz/WorldHappinessReport_16540413532210/WORLDHAPPINESS?publish=yes
- 
+  
 
  <i> Our dashboard contains visualizations using data from Kaggle's 2015-2019 World Happiness Report dataset. We chose to visualize data from the Happiness Score, Happiness Rank, Trust, Freedom, and GDP columns of the data sets. These data are consistent over time, and can be used to show trends in Happiness. 
  
 ##### Happiness Score
 Happiness Score is collected by asking participants to rank their happiness on a scale from 1-10. 
  
-![hap_score_img](https://github.com/jbranaman/Capstone_Project/blob/main/Tableau%20Visualizations/HappinessScore.png)
+![hap_score_img](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/HappinessScore.png)
  
 ##### Happiness Rank
 Happiness Rank is the rank assigned to each nation (here, grouped into Regions) after the Happiness Score data is collected.
  
-![hap_rank_img](https://github.com/jbranaman/Capstone_Project/blob/main/Tableau%20Visualizations/HappinessRank.png)
+![hap_rank_img](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/HappinessRank.png)
  
 ##### Trust
  
-![trust_img](https://github.com/jbranaman/Capstone_Project/blob/main/Tableau%20Visualizations/TrustGovernment.png)
+![trust_img](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/TrustGovernment.png)
  
  
 ##### Freedom                        
  
-![free_img](https://github.com/jbranaman/Capstone_Project/blob/main/Tableau%20Visualizations/FreedomPerception.png)
+![free_img](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/FreedomPerception.png)
 
 ##### GDP per Capita
 
- ![gdp_img](https://github.com/jbranaman/Capstone_Project/blob/main/Tableau%20Visualizations/EconomicOutputGDP.png)
+ ![gdp_img](https://github.com/ouzgrp/Final-Project/blob/ML---Tue/EconomicOutputGDP.png)
